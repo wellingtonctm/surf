@@ -14,7 +14,7 @@ The [Web Search](https://surf.suckless.org/patches/web-search/) patch adds a con
 **Configuration Snippet:**
 
 ```c
-static char \*searchurl = "https://www.google.com/search?q=\%s";
+static char *searchurl = "https://www.google.com/search?q=\%s";
 ```
 
 *Note:* Ensure that `dmenu` is installed and properly configured to utilize this feature.
@@ -26,7 +26,7 @@ To enhance readability, the default font size has been increased from 12 to 14.
 **Configuration Snippet:**
 
 ```c
-\[FontSize\] = \{ \{ .i = 14 \}, \},
+[FontSize] = { { .i = 14 }, },
 ```
 
 This change is made in the `config.def.h` file before compiling the browser.
@@ -38,10 +38,10 @@ The `config.mk` file has been modified to use `webkit2gtk-4.0` instead of `webki
 **Modified `config.mk` Snippet:**
 
 ```make
-GTKINC = \`pkg-config --cflags gtk+-3.0 gcr-3 webkit2gtk-4.0\`
-GTKLIB = \`pkg-config --libs gtk+-3.0 gcr-3 webkit2gtk-4.0\`
-WEBEXTINC = \`pkg-config --cflags webkit2gtk-4.0 webkit2gtk-web-extension-4.0 gio-2.0\`
-WEBEXTLIBS = \`pkg-config --libs webkit2gtk-4.0 webkit2gtk-web-extension-4.0 gio-2.0\`
+GTKINC = `pkg-config --cflags gtk+-3.0 gcr-3 webkit2gtk-4.0`
+GTKLIB = `pkg-config --libs gtk+-3.0 gcr-3 webkit2gtk-4.0`
+WEBEXTINC = `pkg-config --cflags webkit2gtk-4.0 webkit2gtk-web-extension-4.0 gio-2.0`
+WEBEXTLIBS = `pkg-config --libs webkit2gtk-4.0 webkit2gtk-web-extension-4.0 gio-2.0`
 ```
 
 *Note:* Ensure that `webkit2gtk-4.0` and its development files are installed on your system.
@@ -70,7 +70,7 @@ WEBEXTLIBS = \`pkg-config --libs webkit2gtk-4.0 webkit2gtk-web-extension-4.0 gio
 Launch Surf with an optional URL:
 
 ```bash
-surf \[URL\]
+surf [URL]
 ```
 
 - Press `MODKEY + s` to initiate a Google search via `dmenu`.
