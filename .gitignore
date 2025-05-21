@@ -1,0 +1,60 @@
+# Compiled object files
+*.o
+*.lo
+*.slo
+
+# Compiled Dynamic libraries
+*.so
+*.so.*
+
+# Compiled Static libraries
+*.a
+*.la
+
+# Executable files
+surf
+webext-surf.so
+
+# Backup and temporary files
+*~
+*.swp
+*.bak
+*.tmp
+
+# Log files
+*.log
+
+# Patch files
+*.diff
+*.patch
+
+# Editor-specific files
+# Vim
+*.swp
+*.swo
+
+# Emacs
+*~
+
+# VS Code
+.vscode/
+
+# CLion
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Surf-specific files
+config.h
+config.mk
+surf-open.sh
+surf.png
+
+# Build artifacts
+Makefile
